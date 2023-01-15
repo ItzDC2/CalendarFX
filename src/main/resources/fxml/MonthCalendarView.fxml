@@ -5,30 +5,30 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<fx:root fx:id="view" hgap="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" type="GridPane" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root fx:id="view" hgap="5.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" type="GridPane" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
   <columnConstraints>
-    <ColumnConstraints />
-    <ColumnConstraints />
-      <ColumnConstraints />
-      <ColumnConstraints />
-      <ColumnConstraints />
-      <ColumnConstraints />
-      <ColumnConstraints />
+    <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" />
+    <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" />
+      <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" />
+      <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" />
+      <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" />
+      <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" />
+      <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" />
   </columnConstraints>
   <rowConstraints>
-    <RowConstraints minHeight="-Infinity" />
-      <RowConstraints minHeight="-Infinity" />
-      <RowConstraints minHeight="-Infinity" />
-      <RowConstraints minHeight="-Infinity" />
-      <RowConstraints minHeight="-Infinity" />
-      <RowConstraints minHeight="-Infinity" />
-      <RowConstraints minHeight="-Infinity" />
-      <RowConstraints minHeight="-Infinity" />
+    <RowConstraints maxHeight="1.7976931348623157E308" />
+      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="-Infinity" />
+      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="-Infinity" vgrow="ALWAYS" />
+      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="-Infinity" vgrow="ALWAYS" />
+      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="-Infinity" vgrow="ALWAYS" />
+      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="-Infinity" vgrow="ALWAYS" />
+      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="-Infinity" vgrow="ALWAYS" />
+      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="-Infinity" vgrow="ALWAYS" />
       <RowConstraints />
       <RowConstraints />
       <RowConstraints />
     <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
-      <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
       <Label id="mesLabel" fx:id="mesLabel" alignment="CENTER" text="Enero" GridPane.columnSpan="7" GridPane.halignment="CENTER" />

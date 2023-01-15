@@ -13,16 +13,16 @@
    <center>
       <GridPane fx:id="view" alignment="CENTER" hgap="10.0" vgap="5.0" BorderPane.alignment="CENTER">
         <columnConstraints>
-          <ColumnConstraints />
-          <ColumnConstraints />
-            <ColumnConstraints />
-            <ColumnConstraints />
+          <ColumnConstraints hgrow="ALWAYS" />
+          <ColumnConstraints hgrow="ALWAYS" />
+            <ColumnConstraints hgrow="ALWAYS" />
+            <ColumnConstraints hgrow="ALWAYS" />
         </columnConstraints>
         <rowConstraints>
             <RowConstraints minHeight="-Infinity" />
-            <RowConstraints />
-          <RowConstraints />
-          <RowConstraints />
+            <RowConstraints vgrow="ALWAYS" />
+          <RowConstraints vgrow="ALWAYS" />
+          <RowConstraints vgrow="ALWAYS" />
         </rowConstraints>
          <children>
             <MonthCalendar fx:id="eneroCalendar" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
