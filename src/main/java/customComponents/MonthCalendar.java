@@ -145,13 +145,10 @@ public class MonthCalendar extends GridPane implements Initializable {
 
 	private Label getLabelPorCoordenada(int row, int col) {
 		
-		List<Label> labels = view.getChildren().stream()
+		return view.getChildren().stream()
 				.filter(nodo -> nodo instanceof Label)
 				.filter(nodo -> "diaLabel".equals(nodo.getId()))
 				.map(nodo -> (Label) nodo)
-				.collect(Collectors.toList());	
-		
-		return labels.stream()
 				.filter(label -> GridPane.getRowIndex(label) == row && GridPane.getColumnIndex(label) == col)
 				.findFirst().get();
 	}
