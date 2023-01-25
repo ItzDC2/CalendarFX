@@ -70,7 +70,7 @@ public class CalendarController implements Initializable {
 				.collect(Collectors.toList());
 
 		calendars.stream().forEach(i -> i.yearPropertyProperty().bind(yearProperty));
-		
+
 	}
 	
     @FXML

@@ -4,9 +4,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
 import java.time.YearMonth;
-import java.util.List;
 import java.util.ResourceBundle;
-import java.util.stream.Collectors;
 
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
@@ -107,28 +105,37 @@ public class MonthCalendar extends GridPane implements Initializable {
 
 		int row = 2;
 		for (int i = 1; i <= diasTotales; i++) {
-			LocalDate now = LocalDate.of(getYearProperty(), getMonthProperty(), i);
-			switch (now.getDayOfWeek()) {
+
+			LocalDate ahora = LocalDate.of(getYearProperty(), getMonthProperty(), i);
+			
+			switch (ahora.getDayOfWeek()) {
 			case MONDAY:
-				getLabelPorCoordenada(row, 0).setText(now.getDayOfMonth() + "");
+				getLabelPorCoordenada(row, 0).setText(ahora.getDayOfMonth() + "");
+				setToday(getLabelPorCoordenada(row, 0), ahora);
 				break;
 			case TUESDAY:
-				getLabelPorCoordenada(row, 1).setText(now.getDayOfMonth() + "");
+				getLabelPorCoordenada(row, 1).setText(ahora.getDayOfMonth() + "");
+				setToday(getLabelPorCoordenada(row, 1), ahora);
 				break;
 			case WEDNESDAY:
-				getLabelPorCoordenada(row, 2).setText(now.getDayOfMonth() + "");
+				getLabelPorCoordenada(row, 2).setText(ahora.getDayOfMonth() + "");
+				setToday(getLabelPorCoordenada(row, 2), ahora);
 				break;
 			case THURSDAY:
-				getLabelPorCoordenada(row, 3).setText(now.getDayOfMonth() + "");
+				getLabelPorCoordenada(row, 3).setText(ahora.getDayOfMonth() + "");
+				setToday(getLabelPorCoordenada(row, 3), ahora);
 				break;
 			case FRIDAY:
-				getLabelPorCoordenada(row, 4).setText(now.getDayOfMonth() + "");
+				getLabelPorCoordenada(row, 4).setText(ahora.getDayOfMonth() + "");
+				setToday(getLabelPorCoordenada(row, 4), ahora);
 				break;
 			case SATURDAY:
-				getLabelPorCoordenada(row, 5).setText(now.getDayOfMonth() + "");
+				getLabelPorCoordenada(row, 5).setText(ahora.getDayOfMonth() + "");
+				setToday(getLabelPorCoordenada(row, 5), ahora);
 				break;
 			case SUNDAY:
-				getLabelPorCoordenada(row, 6).setText(now.getDayOfMonth() + "");
+				getLabelPorCoordenada(row, 6).setText(ahora.getDayOfMonth() + "");
+				setToday(getLabelPorCoordenada(row, 6), ahora);
 				row++;
 				break;
 			}
@@ -136,11 +143,20 @@ public class MonthCalendar extends GridPane implements Initializable {
 
 	}
 	
+	private void setToday(Label l, LocalDate ahora) {
+		if(ahora.getDayOfWeek() == LocalDate.now().getDayOfWeek() && ahora.getDayOfMonth() == LocalDate.now().getDayOfMonth() && ahora.getMonth() == LocalDate.now().getMonth()
+				&& LocalDate.now().getYear() == ahora.getYear())
+			l.getStyleClass().add("today");
+	}
+	
 	private void limpiarLabels() {
 		view.getChildren().stream()
 			.filter(nodo -> "diaLabel".equals(nodo.getId()))
 			.map(i -> (Label) i)
-			.forEach(label -> label.setText(""));
+			.forEach(label -> {
+				label.setText("");
+				label.getStyleClass().remove("today");
+			});
 	}
 
 	private Label getLabelPorCoordenada(int row, int col) {

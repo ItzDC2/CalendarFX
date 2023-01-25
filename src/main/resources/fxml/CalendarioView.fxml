@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<BorderPane fx:id="bp" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="bp" stylesheets="@../css/estilos.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <center>
       <GridPane fx:id="view" alignment="CENTER" hgap="10.0" vgap="5.0" BorderPane.alignment="CENTER">
         <columnConstraints>
@@ -53,9 +53,9 @@
                   <Insets bottom="10.0" />
                </GridPane.margin>
             </MonthCalendar>
-            <Label fx:id="yearLabel" text="Label" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" />
-            <Button fx:id="backButton" mnemonicParsing="false" onAction="#onBackAction" text="&lt;" />
-            <Button fx:id="forwardButton" mnemonicParsing="false" onAction="#onForwardAction" text="&gt;" GridPane.columnIndex="3" GridPane.halignment="RIGHT" />
+            <Label fx:id="yearLabel" styleClass="year" text="Label" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" />
+            <Button fx:id="backButton" mnemonicParsing="false" onAction="#onBackAction" styleClass="change-button" text="&lt;" />
+            <Button fx:id="forwardButton" mnemonicParsing="false" onAction="#onForwardAction" styleClass="change-button" text="&gt;" GridPane.columnIndex="3" GridPane.halignment="RIGHT" />
          </children>
          <padding>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
